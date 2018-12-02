@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_2.v-if</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <template v-if="visible">
+        <h1>Header 1</h1>
+        <p>Paragraph 1</p>
+    </template>
+    <template v-else>
+        <h1>Header 2</h1>
+        <p>Paragraph 2</p>
+    </template>
+    <button v-on:click="visible=!visible">{{visible?'to template 2':'to template 1'}}</button>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            visible: true
+        }
+    });
+</script>
+</body>
+</html>

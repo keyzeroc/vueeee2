@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>4_0.Vue Forms</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+</head>
+<body>
+<div id="app" class="col-md-4">
+    <label>Login</label>
+    <input type="text" v-model="login" placeholder="Enter login" class="form-control" /><br>
+    <label>Pass</label>
+    <input type="password" v-model="password" placeholder="Enter pass" class="form-control" /><br>
+    <label>Age</label>
+    <input type="number" v-model="age" min="18" placeholder="Enter age" class="form-control" /><br>
+    <label>Reg date</label><br>
+    <input type="date" v-model="date" placeholder="Enter date" class="form-control" />
+    <br>
+    <div>
+        <h3>Entered info:</h3>
+        <p>Login: {{login}}</p>
+        <p>Pass: {{password}}</p>
+        <p>Age: {{age}}</p>
+        <p>Reg date: {{date}}</p>
+    </div>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            login:'',
+            password:'',
+            date: '',
+            age: 22
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_3.v-if</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <input type="number" v-model="number" />
+    <template v-if="number==1">
+        <p>One</p>
+    </template>
+    <template v-else-if="number==2">
+        <p>Two</p>
+    </template>
+    <template v-else-if="number>2 && number<7">
+        <p>Few</p>
+    </template>
+    <template v-else>
+        <p>Many</p>
+    </template> 
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            number: 1
+        }
+    });
+</script>
+</body>
+</html>

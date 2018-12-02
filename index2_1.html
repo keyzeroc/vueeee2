@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2_1.Array Controll</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <ul>
+      <li v-for="phone in phones">
+      <p>{{ phone }}</p>
+    </ul>
+    <button v-on:click="updateList">Update</button>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            newPhone: '',
+            phones: ['iPhone 7', 'Galaxy S8', 'Nokia N8', 'Xiaomi Mi6']
+        },
+        methods:{
+            updateList: function(){
+                Vue.set(this.phones, 1, 'Samsung Galaxy S8');
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_9.v-for</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="user in users">
+            <p v-for="(value,key) in user">{{key}} : {{value}}</p>
+        </li>
+         
+    </ul>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            users: [
+                    {name:'Keyy', age:18}, 
+                    {name:'Tom', age:20}, 
+                    {name: 'Sam', age:30}
+            ]
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>1_1.v-if</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <p v-if="visible">First paragraph</p>
+    <p v-else>Second paragraph</p>
+    <button v-on:click="visible=!visible">{{visible?'to paragraph 2':'to paragraph 1'}}</button>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            visible: true
+        }
+    });
+</script>
+</body>
+</html>
+

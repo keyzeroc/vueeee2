@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>7_1.Select list</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+    <select v-model="users" multiple>
+        <option>Tom</option>
+        <option>Bob</option>
+        <option>Sam</option>
+        <option>Alice</option>
+    </select>
+    <span>Selected: {{users}}</span>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            users:[]
+        }
+    });
+</script>
+</body>
+</html>

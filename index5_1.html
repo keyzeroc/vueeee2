@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>5_1.Checkbox</title>
+<meta charset="utf-8" />
+</head>
+<body>
+<div id="app">
+	<input type="checkbox" v-model="light" v-bind:true-value="on" v-bind:false-value="off" />
+	<span v-if="light===on">Off</span>
+	<span v-else>On</span>
+</div>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+			on: true,
+			off:false,
+			light: true
+        }
+    });
+</script>
+</body>
+</html>
